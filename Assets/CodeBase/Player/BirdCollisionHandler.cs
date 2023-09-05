@@ -19,8 +19,7 @@ namespace CodeBase.Player
 
         private void OnTriggerEnter2D(Collider2D collider2D)
         {
-            if (collider2D.TryGetComponent(out EnemyBullet enemyBullet)
-                || collider2D.TryGetComponent(out DestroyBullet destroyBullet))
+            if (collider2D.TryGetComponent(out BirdBullet bullet) != true)
             {
                 _bird.Died();
             }
